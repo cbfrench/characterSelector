@@ -1,0 +1,168 @@
+body{
+    background: black;
+    font-family: "Coda", sans-serif;
+    font-style: italic;
+}
+
+h4{
+    visibility: hidden;
+}
+
+#menu{
+    font-style: normal;
+    color: white;
+    background: gray;
+    background: rgba(255, 255, 255, 0.25);
+    display: inline-block;
+    float: right;
+    margin-top: 2em;
+    margin-right: 5em;
+    padding: 1em;
+    border: 0px;
+    font-family: "Coda", sans-serif;
+}
+
+#menu:hover{
+    background: #666666;
+}
+
+#title{
+    color: white;
+    font-style: italic;
+    text-decoration: underline;
+    display: inline-block;
+}
+
+#best, #enjoy, #tier, #characters, #results{
+    padding: .5em;
+    margin: 0 auto;
+    color: #AAAAAA;
+    height: 6em;
+    margin-bottom: .2em;
+    background: linear-gradient(to bottom, #444444, #151515);
+    background: rgba(255, 255, 255, 0.1);
+    max-width: 75em;
+    min-width: 57.5em;
+    position: relative;
+}
+
+#tier{
+    margin-bottom: 3em;
+}
+
+#characters{
+    height: 8em;
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+#menuContain, #selectContain{
+    background: linear-gradient(to bottom right, #444444, #151515);
+    max-width: 100%;    
+    background: black;
+}
+
+.images{
+    background-color: transparent;
+    display: inline-block;
+    position: absolute;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.description{
+    background-color: transparent;
+    display: inline-block;
+    width: 20em;
+}
+
+.selected{
+    display: inline-block;
+    height: 5em;
+    width: 5em;
+    margin-left: 1em;
+    margin-right: 1em;
+    background-color: #EEEEEE;
+    text-align: center;
+    border-style: solid;
+    border-width: .15em;
+    border-color: #111111;
+    border-radius: .0em;
+    box-shadow: .2em .2em .2em #000000;
+}
+
+.resultImage{
+    display: inline-block;
+    height: 5em;
+    width: 5em;
+    margin-left: 1em;
+    margin-right: 1em;
+    background-color: white;
+    text-align: center;
+    border-style: solid;
+    border-width: .15em;
+    border-color: #003344;
+    border-radius: .0em;
+    box-shadow: .2em .2em .2em #000000;
+}
+
+.selection{
+    display: inline-block;
+    height: 2.5em;
+    width: 2.5em;
+    background-color: white;
+    background: #303030;
+    margin-left: .1em;
+    margin-right: .1em;
+    border-style: solid;
+    border-width: .1em;
+    border-color: #003344;
+    border-radius: .0em;
+    box-shadow: .1em .1em .1em #000000; 
+    position: relative;           
+}   
+
+.selection:hover{
+    background-color: #FFFFFF;
+}
+
+img:hover{
+    cursor: pointer;
+}   
+
+#results{
+    padding: 0em;
+    padding-top: 1em;
+    text-align: center;
+    height: 14.5em;
+    max-width: 76em;
+}
+
+#button{
+    height: 3em;
+    width: 10em;
+    border-radius: 0em;
+    background: rgba(255, 255, 255, 0.2);
+    border: 0em;
+    color: white;
+    font-family: "Coda";
+}
+
+#button:hover{
+    background: #666666;
+}
+
+*:focus{
+    outline-width: 0em;
+}
+
+#copyright{
+    color: #888888;
+    text-align: center;
+    font-size: .5em;
+    background-color: transparent;
+    padding-bottom: .5em;
+}
