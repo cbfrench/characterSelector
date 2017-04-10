@@ -37,6 +37,10 @@ p{
     cursor: default;
 }
 
+#return:focus{
+    outline: none;
+}
+
 #instructions{
     background: gray;
     height: 15em;
