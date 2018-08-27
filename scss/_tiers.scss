@@ -1,0 +1,69 @@
+#character-area{
+    list-style: none;
+    max-width: 90%; 
+    margin: auto;
+    height: 100%;
+    text-align: center;
+    background: linear-gradient(#000000, #660000);
+    padding : {
+        top: 1rem;
+        bottom: 1rem;
+    }
+    display: none;
+}
+%tier{
+    list-style: none;
+    min-height: $tier-height;
+    max-width: 90%;
+    margin: auto{
+        top: 1rem;
+        bottom: 1rem;
+    }
+    position: relative;
+    border: 5px solid $darker;
+    .character{
+        background: $lighter;
+        height: $tier-height;
+        img{
+            height: $tier-height;
+            width: $tier-height;
+        }
+        &:hover{
+            background: white;
+        }
+    }
+}
+.tier-header{
+    min-width: $tier-height;
+    max-width: $tier-height * 2;
+    display: inline-block;
+    min-height: $tier-height;
+    h3{
+        text-align: center;
+        font-size: 1.5rem;
+        color: white;
+        text-shadow: $text-shadow;
+        vertical-align: middle;
+    }
+    border-right: 5px solid $darker;
+}
+#S{
+    background: $red;
+    @extend %tier;
+}
+#A{
+    background: $orange;
+    @extend %tier;
+}
+#B{
+    background: $yellow;
+    @extend %tier;
+}
+#C{
+    background: $green;
+    @extend %tier;
+}
+#D{
+    background: $blue;
+    @extend %tier;
+}

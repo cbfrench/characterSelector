@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  font-family: Roboto; }
+
+p, h1, h2, h3, h4, h5, h6, li, ul {
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0px; }
+
+.character {
+  cursor: pointer;
+  height: 3.5rem;
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  transition: background 0.2s; }
+  .character img {
+    height: 3.5rem;
+    width: 3.5rem; }
+  .character p {
+    position: absolute;
+    text-align: center;
+    bottom: 0.25rem;
+    left: 0;
+    right: 0;
+    font-size: 0.75rem;
+    color: white;
+    text-shadow: 0px 0px 1px black, 0px 0px 2px black, 0px 0px 3px black;
+    display: none; }
+  .character:hover {
+    background: white; }
+
+.placeholder {
+  width: 4.5rem;
+  display: inline-block; }
+
+#header {
+  text-align: center; }
+  #header img {
+    width: 30rem; }
+
+#options {
+  background: black;
+  color: white;
+  height: 2.5rem;
+  width: 10rem;
+  cursor: pointer;
+  margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  text-align: center;
+  line-height: 2.5rem;
+  transition: all 0.2s; }
+  #options:hover {
+    color: black;
+    background: rgba(0, 0, 0, 0.25); }
+
+#character-area {
+  list-style: none;
+  max-width: 90%;
+  margin: auto;
+  height: 100%;
+  text-align: center;
+  background: linear-gradient(#000000, #660000);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: none; }
+
+#S, #A, #B, #C, #D {
+  list-style: none;
+  min-height: 5rem;
+  max-width: 90%;
+  margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  position: relative;
+  border: 5px solid rgba(0, 0, 0, 0.25); }
+  #S .character, #A .character, #B .character, #C .character, #D .character {
+    background: rgba(255, 255, 255, 0.25);
+    height: 5rem; }
+    #S .character img, #A .character img, #B .character img, #C .character img, #D .character img {
+      height: 5rem;
+      width: 5rem; }
+    #S .character:hover, #A .character:hover, #B .character:hover, #C .character:hover, #D .character:hover {
+      background: white; }
+
+.tier-header {
+  min-width: 5rem;
+  max-width: 10rem;
+  display: inline-block;
+  min-height: 5rem;
+  border-right: 5px solid rgba(0, 0, 0, 0.25); }
+  .tier-header h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 0px 0px 1px black, 0px 0px 2px black, 0px 0px 3px black;
+    vertical-align: middle; }
+
+#S {
+  background: rgba(255, 0, 0, 0.6); }
+
+#A {
+  background: rgba(255, 200, 0, 0.6); }
+
+#B {
+  background: rgba(255, 255, 0, 0.6); }
+
+#C {
+  background: rgba(0, 255, 0, 0.6); }
+
+#D {
+  background: rgba(0, 0, 255, 0.6); }
+
+#footer {
+  background: black;
+  color: white;
+  text-align: center;
+  height: 3rem;
+  line-height: 3rem;
+  margin-top: 5rem; }
+
+/*# sourceMappingURL=main.css.map */

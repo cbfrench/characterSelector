@@ -1,0 +1,30 @@
+$tier-height: 5rem;
+$character-height: 3.5rem;
+$speed: 0.2s;
+$tier-opacity: 0.6;
+$darker: rgba(0, 0, 0, 0.25);
+$lighter: rgba(255, 255, 255, 0.25);
+$red: rgba(255, 0, 0, $tier-opacity);
+$orange: rgba(255, 200, 0, $tier-opacity);
+$yellow: rgba(255, 255, 0, $tier-opacity);
+$green: rgba(0, 255, 0, $tier-opacity);
+$blue: rgba(0, 0, 255, $tier-opacity);
+$purple: rgba(100, 0, 255, $tier-opacity);
+$text-shadow: 0px 0px 1px black, 0px 0px 2px black, 0px 0px 3px black;
+
+@mixin t($property){
+    transition: $property $speed;
+}
+
+
+body{
+    margin: 0;
+    font-family: Roboto;
+}
+p, h1, h2, h3, h4, h5, h6, li, ul{
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+}

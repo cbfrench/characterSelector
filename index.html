@@ -1,79 +1,40 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Character Helper</title>
+        <title>Smash Ultimate Tier List Maker</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="characterIcons/emblem.png"/>
-        <link href="https://fonts.googleapis.com/css?family=Coda" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <script src="script.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400" rel="stylesheet">
+        <link rel="shortcut icon" type="image/png" href="../pictures/logo.png"/>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="newscript.js" type="text/javascript"></script>
     </head>
-    <body onload="loadPage()">
-        <div id="title">
-            <h1>SMASH 4 CHARACTER HELPER</h1>
+    <body>
+        <div id="header">
+            <img src="smash-logo.png" />
         </div>
-        <button id="menu" onclick="menu()">
-            Menu
-        </button>
-        <div id="selectContain">
-            <div id="best">
-                <div id="text1" class="description">
-                    <p>This section is for the five characters that you are the best with.</p>
-                </div>
-                <div class="images">
-                    <div id="best1" class="selected" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-                    <div id="best2" class="selected" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                    <div id="best3" class="selected" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                    <div id="best4" class="selected" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                    <div id="best5" class="selected" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                </div>
-            </div>
-            <div id="enjoy">
-                <div id="text2" class="description">
-                    <p>This section is for the five characters that you enjoy playing the most.</p>
-                </div>
-                <div class="images">
-                    <div id="enjoy1" class="selected" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                    <div id="enjoy2" class="selected" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                    <div id="enjoy3" class="selected" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                    <div id="enjoy4" class="selected" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                    <div id="enjoy5" class="selected" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                </div>
-            </div>
-            <div id="tier">
-                <div id="text3" class="description">
-                    <p>This section is for the five characters that you play that you think are the best characters, regardless of how you play them.</p>
-                </div>
-                <div class="images">
-                    <div id="tier1" class="selected" ondrop="drop(event)" ondragover="allowDrop(event)">
-                        
-                    </div>
-                    <div id="tier2" class="selected" ondrop="drop(event)" ondragover="allowDrop(event)">
-                        
-                    </div>
-                    <div id="tier3" class="selected" ondrop="drop(event)" ondragover="allowDrop(event)">
-                        
-                    </div>
-                    <div id="tier4" class="selected" ondrop="drop(event)" ondragover="allowDrop(event)">
-                        
-                    </div>
-                    <div id="tier5" class="selected" ondrop="drop(event)" ondragover="allowDrop(event)">
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="menuContain">
-            <div id="characters">
-            </div>
-            <div id="results">
-                <button id="button" onclick="getResults()">Get Results</button>
-                <h4>Best Characters to Play</h4>
-                <div id="answers"></div>
-            </div>
-            <div id="copyright" ondrop="deleteItem(event)" ondragover="allowDrop(event)">
-                <p>&#169 2017 /u/IAmLordWaffle</p>
-            </div>
+        <ul id="character-area">
+        </ul>
+        <div id="options">Add Text</div>
+        <ul id="S" class="tier">
+            <li class="tier-header"><h3 contenteditable="true">S</h3></li>
+        </ul>
+        <ul id="A" class="tier">
+            <li class="tier-header"><h3 contenteditable="true">A</h3></li>
+        </ul>
+        <ul id="B" class="tier">
+            <li class="tier-header"><h3 contenteditable="true">B</h3></li>
+        </ul>
+        <ul id="C" class="tier">
+            <li class="tier-header"><h3 contenteditable="true">C</h3></li>
+        </ul>
+        <ul id="D" class="tier">
+            <li class="tier-header"><h3 contenteditable="true">D</h3></li>
+        </ul>
+        <div id="footer">
+            <p>&copy;2018 Connor French. All Rights Reserved.</p>
         </div>
     </body>
 </html>
