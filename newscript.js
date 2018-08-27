@@ -69,6 +69,15 @@ var characters = [
     "Zelda",
     "Zero Suit Samus"];
 
+var tiers = [
+    "S",
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+    ];
+
 function populateCharacters(){
     var s = "";
     var area = document.getElementById("character-area");
@@ -80,9 +89,44 @@ function populateCharacters(){
     area.innerHTML = s;
 }
 
+function ceil(n, c){
+    if(n > c){
+        return c;
+    }
+    return n;
+}
+function pow(num){
+    return num * num;
+}
+
+function generateColors(){
+    var t = document.body.getElementsByClassName("tier");
+    for(var i = 0; i < t.length; i++){
+        var r = t.length / 3;
+        var g = t.length / 3 + 3;
+        var b = t.length / 3 + 6;
+        r = pow((i+1)/r);
+        g = pow((i+1)/g);
+        b = pow((i+1)/b);
+        r = ceil(r*255, 255);
+        g = ceil(g*200, 255);
+        b = ceil(b*100, 255);
+        t[i].style.backgroundColor = "rgba("+r+", "+g+", "+b+", 0.9)";
+    }
+}
+
+function initTiers(){
+    var ts = document.getElementById("tiers");
+    for(var i = 0; i < tiers.length; i++){
+        ts.innerHTML = ts.innerHTML + '<ul id="'+tiers[i][0]+'" class="tier"><li class="tier-header"><h3 contenteditable="true">'+tiers[i][0]+'</h3></li></ul>';
+    }
+}
+
 
 $(document).ready(function(){
     populateCharacters();
+    initTiers();
+    generateColors();
     $('.character').draggable({
         connectToSortable: 'ul',
         revert: 'invalid',
@@ -91,9 +135,7 @@ $(document).ready(function(){
     $('#character-area, .tier').sortable({
         items: ".character",
         placeholder: "placeholder",
-        //revert: true
     });
-    //$( "ul, li, p" ).disableSelection();
     $("#options").click(function(){
         if($(this).text() === "Add Text"){
             $(".character p").slideDown(200);
@@ -104,10 +146,11 @@ $(document).ready(function(){
             $(this).text("Add Text");
         }
     });
-    $(".tier li h3").on("keydown",function(e){
-        var key = e.keyCode || e.charCode;  // ie||others
-        if(key == 13)  // if enter key is pressed
-            $(this).blur();  // lose focus
+    $(".tier li h3").on("keydown", function(event, ui){
+        var key = event.keyCode || event.charCode;
+        if(key == 13){
+            $(this).blur();
+        }
     });
 });
 $(window).on("load", function(){

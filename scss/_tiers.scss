@@ -11,7 +11,7 @@
     }
     display: none;
 }
-%tier{
+.tier{
     list-style: none;
     min-height: $tier-height;
     max-width: 90%;
@@ -59,23 +59,26 @@
     box-sizing: border-box;
     border: 5px solid $darker;
 }
-#S{
+/*#S{
     background: $red;
-    @extend %tier;
+    //@extend %tier;
 }
 #A{
     background: $orange;
-    @extend %tier;
+    //@extend %tier;
 }
 #B{
     background: $yellow;
-    @extend %tier;
+    //@extend %tier;
 }
 #C{
     background: $green;
-    @extend %tier;
+    //@extend %tier;
 }
 #D{
     background: $blue;
-    @extend %tier;
+    //@extend %tier;
 }
+#E{
+    background: $purple;
+}*/

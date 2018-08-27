@@ -72,7 +72,7 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
   padding-bottom: 1rem;
   display: none; }
 
-#S, #A, #B, #C, #D {
+.tier {
   list-style: none;
   min-height: 5rem;
   max-width: 90%;
@@ -80,7 +80,7 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
     margin-top: 1rem;
     margin-bottom: 1rem;
   position: relative; }
-  #S .character, #A .character, #B .character, #C .character, #D .character {
+  .tier .character {
     background: rgba(255, 255, 255, 0.25);
     height: 5rem;
     box-sizing: border-box;
@@ -88,13 +88,13 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
     border-right: 3px solid rgba(0, 0, 0, 0.25);
     border-top: 5px solid rgba(0, 0, 0, 0.25);
     border-bottom: 5px solid rgba(0, 0, 0, 0.25); }
-    #S .character img, #A .character img, #B .character img, #C .character img, #D .character img {
+    .tier .character img {
       height: 5rem;
       width: 5rem;
       margin-top: -5px; }
-    #S .character:hover, #A .character:hover, #B .character:hover, #C .character:hover, #D .character:hover {
+    .tier .character:hover {
       background: white; }
-    #S .character p, #A .character p, #B .character p, #C .character p, #D .character p {
+    .tier .character p {
       bottom: -0.35rem; }
 
 .tier-header {
@@ -111,21 +111,29 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
     text-shadow: 0px 0px 1px black, 0px 0px 2px black, 0px 0px 3px black;
     vertical-align: middle; }
 
-#S {
-  background: rgba(255, 0, 0, 0.6); }
-
-#A {
-  background: rgba(255, 200, 0, 0.6); }
-
-#B {
-  background: rgba(255, 255, 0, 0.6); }
-
-#C {
-  background: rgba(0, 255, 0, 0.6); }
-
-#D {
-  background: rgba(0, 0, 255, 0.6); }
-
+/*#S{
+    background: $red;
+    //@extend %tier;
+}
+#A{
+    background: $orange;
+    //@extend %tier;
+}
+#B{
+    background: $yellow;
+    //@extend %tier;
+}
+#C{
+    background: $green;
+    //@extend %tier;
+}
+#D{
+    background: $blue;
+    //@extend %tier;
+}
+#E{
+    background: $purple;
+}*/
 #footer {
   background: black;
   color: white;
