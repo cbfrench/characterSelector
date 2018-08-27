@@ -23,6 +23,8 @@
     &:hover{
         background: white;
     }
+    border: rgba(255, 255, 255, 0.1) 1px solid;
+    box-sizing: border-box;
 }
 .placeholder{
     width: $character-height + 1;

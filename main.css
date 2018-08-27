@@ -15,7 +15,9 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
   display: inline-block;
   position: relative;
   vertical-align: top;
-  transition: background 0.2s; }
+  transition: background 0.2s;
+  border: rgba(255, 255, 255, 0.1) 1px solid;
+  box-sizing: border-box; }
   .character img {
     height: 3.5rem;
     width: 3.5rem; }
