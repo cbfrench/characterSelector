@@ -41,7 +41,7 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
   margin-bottom: 2rem; }
   #header img {
     width: 30rem; }
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 480px) {
     #header img {
       width: 20rem; } }
 
