@@ -20,16 +20,27 @@
         bottom: 1rem;
     }
     position: relative;
-    border: 5px solid $darker;
+    //border: 5px solid $darker;
     .character{
         background: $lighter;
         height: $tier-height;
         img{
             height: $tier-height;
             width: $tier-height;
+            margin-top: -5px;
         }
         &:hover{
             background: white;
+        }
+        box-sizing: border-box;
+        border: {
+            left: 3px solid $darker;
+            right: 3px solid $darker;
+            top: 5px solid $darker;
+            bottom: 5px solid $darker;
+        }
+        p{
+            bottom: -0.35rem;
         }
     }
 }
@@ -45,7 +56,8 @@
         text-shadow: $text-shadow;
         vertical-align: middle;
     }
-    border-right: 5px solid $darker;
+    box-sizing: border-box;
+    border: 5px solid $darker;
 }
 #S{
     background: $red;

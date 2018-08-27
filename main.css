@@ -22,7 +22,7 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
   .character p {
     position: absolute;
     text-align: center;
-    bottom: 0.25rem;
+    bottom: 0.15rem;
     left: 0;
     right: 0;
     font-size: 0.75rem;
@@ -37,7 +37,8 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
   display: inline-block; }
 
 #header {
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 2rem; }
   #header img {
     width: 30rem; }
 
@@ -75,23 +76,31 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
   margin: auto;
     margin-top: 1rem;
     margin-bottom: 1rem;
-  position: relative;
-  border: 5px solid rgba(0, 0, 0, 0.25); }
+  position: relative; }
   #S .character, #A .character, #B .character, #C .character, #D .character {
     background: rgba(255, 255, 255, 0.25);
-    height: 5rem; }
+    height: 5rem;
+    box-sizing: border-box;
+    border-left: 3px solid rgba(0, 0, 0, 0.25);
+    border-right: 3px solid rgba(0, 0, 0, 0.25);
+    border-top: 5px solid rgba(0, 0, 0, 0.25);
+    border-bottom: 5px solid rgba(0, 0, 0, 0.25); }
     #S .character img, #A .character img, #B .character img, #C .character img, #D .character img {
       height: 5rem;
-      width: 5rem; }
+      width: 5rem;
+      margin-top: -5px; }
     #S .character:hover, #A .character:hover, #B .character:hover, #C .character:hover, #D .character:hover {
       background: white; }
+    #S .character p, #A .character p, #B .character p, #C .character p, #D .character p {
+      bottom: -0.35rem; }
 
 .tier-header {
   min-width: 5rem;
   max-width: 10rem;
   display: inline-block;
   min-height: 5rem;
-  border-right: 5px solid rgba(0, 0, 0, 0.25); }
+  box-sizing: border-box;
+  border: 5px solid rgba(0, 0, 0, 0.25); }
   .tier-header h3 {
     text-align: center;
     font-size: 1.5rem;
