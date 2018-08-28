@@ -1,0 +1,15 @@
+#footer{
+    a{
+        color: white;
+        @include t(all);
+        text-decoration: none;
+        &:hover{
+            color: #660000;
+        }
+    }
+    background: black;
+    text-align: center;
+    height: 3rem;
+    line-height: 3rem;
+    margin-top: 5rem;
+}

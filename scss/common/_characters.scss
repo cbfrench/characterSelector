@@ -1,6 +1,6 @@
 .character{
     cursor: pointer;
-    height: $character-height;
+    height: $character-height !important;
     img{
         height: $character-height;
         width: $character-height;
@@ -8,7 +8,7 @@
     p{
         position: absolute;
         text-align: center;
-        bottom: 0.15rem;
+        bottom: -0.15rem;
         left: 0;
         right: 0;
         font-size: 0.75rem;

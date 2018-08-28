@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: Roboto; }
+  font-family: Roboto, sans-serif; }
 
 p, h1, h2, h3, h4, h5, h6, li, ul {
   -webkit-margin-before: 0em;
@@ -11,7 +11,7 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
 
 .character {
   cursor: pointer;
-  height: 3.5rem;
+  height: 3.5rem !important;
   display: inline-block;
   position: relative;
   vertical-align: top;
@@ -24,7 +24,7 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
   .character p {
     position: absolute;
     text-align: center;
-    bottom: 0.15rem;
+    bottom: -0.15rem;
     left: 0;
     right: 0;
     font-size: 0.75rem;
@@ -38,20 +38,16 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
   width: 4.5rem;
   display: inline-block; }
 
-#header {
-  text-align: center;
-  margin-bottom: 2rem; }
-  #header img {
-    width: 30rem; }
-  @media only screen and (max-width: 480px) {
-    #header img {
-      width: 20rem; } }
+.buttons {
+  text-align: center; }
 
-#options {
+.button {
+  display: inline-block;
   background: black;
   color: white;
   height: 2.5rem;
   width: 10rem;
+  user-select: none;
   cursor: pointer;
   margin: auto;
     margin-top: 1rem;
@@ -59,9 +55,23 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
   text-align: center;
   line-height: 2.5rem;
   transition: all 0.2s; }
-  #options:hover {
+  .button:hover {
     color: black;
     background: rgba(0, 0, 0, 0.25); }
+
+.option-buttons {
+  display: none; }
+
+#header {
+  text-align: center;
+  margin-bottom: 2rem; }
+  #header img {
+    width: 30rem; }
+  @media only screen and (max-width: 480px) {
+    #header {
+      margin-bottom: 5rem; }
+      #header img {
+        width: 20rem; } }
 
 #character-area {
   list-style: none;
@@ -72,38 +82,42 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
   background: linear-gradient(#000000, #660000);
   padding-top: 1rem;
   padding-bottom: 1rem;
-  display: none; }
+  display: none;
+  min-height: 14rem; }
+
+#tiers {
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
 
 .tier {
   list-style: none;
-  min-height: 5rem;
+  min-height: 4.25rem;
   max-width: 90%;
   margin: auto;
-    margin-top: 1rem;
     margin-bottom: 1rem;
   position: relative; }
   .tier .character {
     background: rgba(255, 255, 255, 0.25);
-    height: 5rem;
+    height: 4.25rem !important;
     box-sizing: border-box;
     border-left: 3px solid rgba(0, 0, 0, 0.25);
     border-right: 3px solid rgba(0, 0, 0, 0.25);
     border-top: 5px solid rgba(0, 0, 0, 0.25);
     border-bottom: 5px solid rgba(0, 0, 0, 0.25); }
     .tier .character img {
-      height: 5rem;
-      width: 5rem;
+      height: 4.25rem;
+      width: 4.25rem;
       margin-top: -5px; }
     .tier .character:hover {
       background: white; }
-    .tier .character p {
-      bottom: -0.35rem; }
+  .tier:last-child {
+    margin-bottom: 0rem; }
 
 .tier-header {
-  min-width: 5rem;
-  max-width: 10rem;
+  min-width: 4.25rem;
+  max-width: 8.5rem;
   display: inline-block;
-  min-height: 5rem;
+  min-height: 4.25rem;
   box-sizing: border-box;
   border: 5px solid rgba(0, 0, 0, 0.25); }
   .tier-header h3 {
@@ -113,35 +127,101 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
     text-shadow: 0px 0px 1px black, 0px 0px 2px black, 0px 0px 3px black;
     vertical-align: middle; }
 
-/*#S{
-    background: $red;
-    //@extend %tier;
-}
-#A{
-    background: $orange;
-    //@extend %tier;
-}
-#B{
-    background: $yellow;
-    //@extend %tier;
-}
-#C{
-    background: $green;
-    //@extend %tier;
-}
-#D{
-    background: $blue;
-    //@extend %tier;
-}
-#E{
-    background: $purple;
-}*/
-#footer {
+#canvas-area {
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 300; }
+  #canvas-area canvas {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    right: 0; }
+  #canvas-area #download-button {
+    position: absolute;
+    width: 10rem;
+    height: 5rem;
+    text-align: center;
+    margin: auto;
+    bottom: 5%;
+    left: 0;
+    right: 0;
+    background: white;
+    color: black;
+    cursor: pointer;
+    transition: all 0.2s; }
+    #canvas-area #download-button button {
+      background: transparent;
+      height: 100%;
+      width: 100%;
+      cursor: pointer;
+      font-family: Roboto, sans-serif;
+      font-size: 1.25rem;
+      border: none; }
+    #canvas-area #download-button:hover {
+      background: #660000; }
+      #canvas-area #download-button:hover button {
+        color: white; }
+
+#about-button {
+  position: absolute;
+  right: 5%;
+  top: 2rem; }
+  @media only screen and (max-width: 480px) {
+    #about-button {
+      top: 8rem; } }
+
+#about-close {
+  position: absolute;
+  top: 0rem;
+  right: 1rem;
+  background: rgba(255, 255, 255, 0.25); }
+  #about-close:hover {
+    background: white;
+    color: black; }
+
+#about-section {
+  display: none;
+  position: fixed;
+  z-index: 200;
+  left: 5%;
+  right: 5%;
+  top: 5%;
+  bottom: 5%;
   background: black;
   color: white;
+  text-align: center;
+  padding: 1rem; }
+  #about-section h1 {
+    margin-bottom: 2rem;
+    text-transform: uppercase; }
+  #about-section h3 {
+    background: white;
+    color: black;
+    padding: 0.5rem;
+    width: 10rem;
+    margin: auto;
+      margin-bottom: 1rem; }
+  #about-section p span {
+    font-weight: bold;
+    text-decoration: underline;
+    margin-right: 1rem; }
+
+#footer {
+  background: black;
   text-align: center;
   height: 3rem;
   line-height: 3rem;
   margin-top: 5rem; }
+  #footer a {
+    color: white;
+    transition: all 0.2s;
+    text-decoration: none; }
+    #footer a:hover {
+      color: #660000; }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,51 @@
+#about-button{
+    position: absolute;
+    right: 5%;
+    top: 2rem;
+    @include bp(480px){
+        top: 8rem;
+    }
+}
+#about-close{
+    position: absolute;
+    top: 0rem;
+    right: 1rem;
+    background: $lighter;
+    &:hover{
+        background: white;
+        color: black;
+    }
+}
+#about-section{
+    display: none;
+    position: fixed;
+    z-index: 200;
+    left: 5%;
+    right: 5%;
+    top: 5%;
+    bottom: 5%;
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    h1{
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+    }
+    h3{
+        background: white;
+        color: black;
+        padding: 0.5rem;
+        width: 10rem;
+        margin: auto{
+            bottom: 1rem;
+        }
+    }
+    p{
+        span{
+            font-weight: bold;
+            text-decoration: underline;
+            margin-right: 1rem;
+        }
+    }
+}

@@ -10,20 +10,23 @@
         bottom: 1rem;
     }
     display: none;
+    min-height: $character-height * 4;
+}
+#tiers{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 .tier{
     list-style: none;
     min-height: $tier-height;
     max-width: 90%;
     margin: auto{
-        top: 1rem;
         bottom: 1rem;
     }
     position: relative;
-    //border: 5px solid $darker;
     .character{
         background: $lighter;
-        height: $tier-height;
+        height: $tier-height !important;
         img{
             height: $tier-height;
             width: $tier-height;
@@ -39,9 +42,9 @@
             top: 5px solid $darker;
             bottom: 5px solid $darker;
         }
-        p{
-            bottom: -0.35rem;
-        }
+    }
+    &:last-child{
+        margin-bottom: 0rem;
     }
 }
 .tier-header{
@@ -59,26 +62,50 @@
     box-sizing: border-box;
     border: 5px solid $darker;
 }
-/*#S{
-    background: $red;
-    //@extend %tier;
+#canvas-area{
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 300;
+    canvas{
+        position: absolute;
+        top: 25%;
+        left: 0;
+        right: 0;
+    }
+    #download-button{
+        position: absolute;
+        width: 10rem;
+        height: 5rem;
+        text-align: center;
+        margin: auto;
+        bottom: 5%;
+        left: 0;
+        right: 0;
+        background: white;
+        color: black;
+        cursor: pointer;
+        button{
+            background: transparent;
+            height: 100%;
+            width: 100%;
+            cursor: pointer;
+            font : {
+                family: $font;
+                size: 1.25rem;
+            }
+            border: none;
+        }
+        @include t(all);
+        &:hover{
+            button{
+                color: white;
+            }
+            background: #660000;
+        }
+    }
 }
-#A{
-    background: $orange;
-    //@extend %tier;
-}
-#B{
-    background: $yellow;
-    //@extend %tier;
-}
-#C{
-    background: $green;
-    //@extend %tier;
-}
-#D{
-    background: $blue;
-    //@extend %tier;
-}
-#E{
-    background: $purple;
-}*/

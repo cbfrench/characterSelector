@@ -1,6 +1,7 @@
-@import 'variables';
-@import 'characters';
-@import 'header';
-@import 'options';
-@import 'tiers';
-@import 'footer';
+@import 'global/variables';
+@import 'common/characters';
+@import 'common/buttons';
+@import 'layouts/header';
+@import 'layouts/tiers';
+@import 'layouts/about';
+@import 'layouts/footer';

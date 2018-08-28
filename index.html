@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
         <script src="newscript.js" type="text/javascript"></script>
+        <script src="html2canvas.js" type="text/javascript"></script>
     </head>
     <body>
         <div id="header">
@@ -17,28 +18,32 @@
         </div>
         <ul id="character-area">
         </ul>
-        <div id="options">Add Text</div>
+        <div class="buttons">
+            <div id="save-list" class="button">Get Image</div>
+            <div id="options" class="button">Options</div>
+            <div id="reset" class="button">Reset</div>
+        </div>
+        <div class="buttons option-buttons">
+            <div id="add-text" class="button">Add Text</div>
+            <div id="add-tier" class="button">Add Tier</div>
+            <div id="remove-tier" class="button">Remove Tier</div>
+        </div>
         <div id="tiers">
-            <!--
-            <ul id="S" class="tier">
-                <li class="tier-header"><h3 contenteditable="true">S</h3></li>
-            </ul>
-            <ul id="A" class="tier">
-                <li class="tier-header"><h3 contenteditable="true">A</h3></li>
-            </ul>
-            <ul id="B" class="tier">
-                <li class="tier-header"><h3 contenteditable="true">B</h3></li>
-            </ul>
-            <ul id="C" class="tier">
-                <li class="tier-header"><h3 contenteditable="true">C</h3></li>
-            </ul>
-            <ul id="D" class="tier">
-                <li class="tier-header"><h3 contenteditable="true">D</h3></li>
-            </ul>
-            -->
+        </div>
+        <div class="buttons">
         </div>
         <div id="footer">
-            <p>&copy;2018 Connor French. All Rights Reserved.</p>
+            <p><a href="https://cbfrench.github.io">&copy;2018 /u/IAmLordWaffle. All Rights Reserved.</a></p>
+        </div>
+        <div id="about-button" class="button">About</div>
+        <div id="about-section">
+            <h1>About</h1>
+            <h3>Changelog</h3>
+            <p><span>Version 1.0</span> Initial version</p>
+            <div id="about-close" class="button">Close</div>
+        </div>
+        <div id="canvas-area">
+            <a id="download-button" download="tier-list.png"><button type="button" onClick="downloadCanvas()">Download</button></a>
         </div>
     </body>
 </html>
