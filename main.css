@@ -106,6 +106,7 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
 
 #header {
   text-align: center;
+  margin-top: 2rem;
   margin-bottom: 2rem; }
   #header img {
     width: 30rem; }
@@ -176,7 +177,7 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
   top: 2rem; }
   @media only screen and (max-width: 480px) {
     #about-button {
-      top: 8rem; } }
+      top: 10rem; } }
 
 #about-close {
   position: absolute;

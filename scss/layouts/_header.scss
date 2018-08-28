@@ -3,7 +3,10 @@
     img{
         width: 30rem;
     }
-    margin-bottom: 2rem;
+    margin : {
+        top: 2rem;
+        bottom: 2rem;
+    }
     @include bp(480px){
         img{
             width: 20rem;
