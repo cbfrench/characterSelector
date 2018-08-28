@@ -62,6 +62,48 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
 .option-buttons {
   display: none; }
 
+#canvas-area {
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 300; }
+  #canvas-area canvas {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    right: 0; }
+  #canvas-area #download-button {
+    position: absolute;
+    width: 10rem;
+    height: 5rem;
+    text-align: center;
+    margin: auto;
+    bottom: 5%;
+    left: 0;
+    right: 0;
+    background: white;
+    color: black;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.2s; }
+    #canvas-area #download-button button {
+      background: transparent;
+      height: 100%;
+      width: 100%;
+      cursor: pointer;
+      font-family: Roboto, sans-serif;
+      font-size: 1.25rem;
+      border: none;
+      outline: none; }
+    #canvas-area #download-button:hover {
+      background: #660000; }
+      #canvas-area #download-button:hover button {
+        color: white; }
+
 #header {
   text-align: center;
   margin-bottom: 2rem; }
@@ -126,46 +168,6 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
     color: white;
     text-shadow: 0px 0px 1px black, 0px 0px 2px black, 0px 0px 3px black;
     vertical-align: middle; }
-
-#canvas-area {
-  background: rgba(0, 0, 0, 0.9);
-  display: none;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 300; }
-  #canvas-area canvas {
-    position: absolute;
-    top: 25%;
-    left: 0;
-    right: 0; }
-  #canvas-area #download-button {
-    position: absolute;
-    width: 10rem;
-    height: 5rem;
-    text-align: center;
-    margin: auto;
-    bottom: 5%;
-    left: 0;
-    right: 0;
-    background: white;
-    color: black;
-    cursor: pointer;
-    transition: all 0.2s; }
-    #canvas-area #download-button button {
-      background: transparent;
-      height: 100%;
-      width: 100%;
-      cursor: pointer;
-      font-family: Roboto, sans-serif;
-      font-size: 1.25rem;
-      border: none; }
-    #canvas-area #download-button:hover {
-      background: #660000; }
-      #canvas-area #download-button:hover button {
-        color: white; }
 
 #about-button {
   position: absolute;

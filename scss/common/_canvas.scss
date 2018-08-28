@@ -1,0 +1,49 @@
+#canvas-area{
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 300;
+    canvas{
+        position: absolute;
+        top: 25%;
+        left: 0;
+        right: 0;
+    }
+    #download-button{
+        position: absolute;
+        width: 10rem;
+        height: 5rem;
+        text-align: center;
+        margin: auto;
+        bottom: 5%;
+        left: 0;
+        right: 0;
+        background: white;
+        color: black;
+        cursor: pointer;
+        button{
+            background: transparent;
+            height: 100%;
+            width: 100%;
+            cursor: pointer;
+            font : {
+                family: $font;
+                size: 1.25rem;
+            }
+            border: none;
+            outline: none;
+        }
+        outline: none;
+        @include t(all);
+        &:hover{
+            button{
+                color: white;
+            }
+            background: #660000;
+        }
+    }
+}
