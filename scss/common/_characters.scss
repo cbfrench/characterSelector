@@ -1,6 +1,7 @@
 .character{
     cursor: pointer;
     height: $character-height !important;
+    width: $character-height !important;
     img{
         height: $character-height;
         width: $character-height;

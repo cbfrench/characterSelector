@@ -12,6 +12,7 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
 .character {
   cursor: pointer;
   height: 3.5rem !important;
+  width: 3.5rem !important;
   display: inline-block;
   position: relative;
   vertical-align: top;
@@ -70,12 +71,15 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 300; }
+  z-index: 10000; }
   #canvas-area canvas {
     position: absolute;
-    top: 25%;
+    top: 1rem;
     left: 0;
-    right: 0; }
+    right: 0;
+    width: 85% !important;
+    height: unset !important;
+    margin: auto; }
   #canvas-area #download-button {
     position: absolute;
     width: 10rem;
@@ -142,6 +146,7 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
   .tier .character {
     background: rgba(255, 255, 255, 0.25);
     height: 4.25rem !important;
+    width: 4.25rem !important;
     box-sizing: border-box;
     border-left: 3px solid rgba(0, 0, 0, 0.25);
     border-right: 3px solid rgba(0, 0, 0, 0.25);
@@ -191,7 +196,7 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
 #about-section {
   display: none;
   position: fixed;
-  z-index: 200;
+  z-index: 10000;
   left: 5%;
   right: 5%;
   top: 5%;
