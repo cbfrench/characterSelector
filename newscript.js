@@ -107,14 +107,15 @@ function generateColors(){
         r = pow((i+1)/r);
         g = pow((i+1)/g);
         b = pow((i+1)/b);
-        r = ceil(r*255, 255);
-        g = ceil(g*200, 255);
-        b = ceil(b*100, 255);
+        r = Math.round(ceil(r*255, 255));
+        g = Math.round(ceil(g*200, 255));
+        b = Math.round(ceil(b*100, 255));
         if(r+g+b > 700){
             r = 255;
             g = 255;
             b = 175;
         }
+        alert(r + " " + g + " " + b);
         t[i].style.backgroundColor = "rgba("+r+", "+g+", "+b+", 0.9)";
         h[i].style.backgroundColor = "rgba("+r+", "+g+", "+b+", 0.9)";
     }
