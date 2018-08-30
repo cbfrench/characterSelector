@@ -115,7 +115,6 @@ function generateColors(){
             g = 255;
             b = 175;
         }
-        alert(r + " " + g + " " + b);
         t[i].style.backgroundColor = "rgba("+r+", "+g+", "+b+", 0.9)";
         h[i].style.backgroundColor = "rgba("+r+", "+g+", "+b+", 0.9)";
     }
