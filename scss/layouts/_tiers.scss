@@ -16,14 +16,24 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
+.tier-box{
+    margin: auto;
+    margin-top: 1rem;
+    position: relative;
+    margin-left: 4rem;
+    vertical-align: top;
+    margin-right: 4rem;
+}
 .tier{
     list-style: none;
     min-height: $tier-height;
-    max-width: 90%;
+    width: 90%;
     margin: auto{
         bottom: 1rem;
     }
     position: relative;
+    vertical-align: top;
+    display: inline-block;
     .character{
         background: $lighter;
         height: $tier-height !important;
@@ -32,6 +42,7 @@
             height: $tier-height;
             width: $tier-height;
             margin-top: -5px;
+            margin-left: -3px;
         }
         &:hover{
             background: white;
@@ -49,8 +60,7 @@
     }
 }
 .tier-header{
-    min-width: $tier-height;
-    max-width: $tier-height * 2;
+    width: 10%;
     display: inline-block;
     min-height: $tier-height;
     h3{

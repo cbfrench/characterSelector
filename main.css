@@ -51,8 +51,6 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
   user-select: none;
   cursor: pointer;
   margin: auto;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
   text-align: center;
   line-height: 2.5rem;
   transition: all 0.2s; }
@@ -61,7 +59,8 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
     background: rgba(0, 0, 0, 0.25); }
 
 .option-buttons {
-  display: none; }
+  display: none;
+  margin-top: 1rem; }
 
 #canvas-area {
   background: rgba(0, 0, 0, 0.9);
@@ -119,7 +118,16 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
       margin-bottom: 5rem; }
       #header img {
         width: 20rem; } }
-
+  #header p {
+    font-family: "SerpentineDBol", serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    color: #222222; }
+@font-face {
+  #header p {
+    font-family: 'SerpentineDBol';
+    src: url("/fonts/SerpentineDBol.ttf"); } }
 #character-area {
   list-style: none;
   max-width: 90%;
@@ -136,15 +144,25 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
   padding-top: 1rem;
   padding-bottom: 1rem; }
 
+.tier-box {
+  margin: auto;
+  margin-top: 1rem;
+  position: relative;
+  margin-left: 4rem;
+  vertical-align: top;
+  margin-right: 4rem; }
+
 .tier {
   list-style: none;
   min-height: 4.25rem;
-  max-width: 90%;
+  width: 90%;
   margin: auto;
     margin-bottom: 1rem;
-  position: relative; }
+  position: relative;
+  vertical-align: top;
+  display: inline-block; }
   .tier .character {
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.5);
     height: 4.25rem !important;
     width: 4.25rem !important;
     box-sizing: border-box;
@@ -155,15 +173,15 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
     .tier .character img {
       height: 4.25rem;
       width: 4.25rem;
-      margin-top: -5px; }
+      margin-top: -5px;
+      margin-left: -3px; }
     .tier .character:hover {
       background: white; }
   .tier:last-child {
     margin-bottom: 0rem; }
 
 .tier-header {
-  min-width: 4.25rem;
-  max-width: 8.5rem;
+  width: 10%;
   display: inline-block;
   min-height: 4.25rem;
   box-sizing: border-box;
@@ -186,9 +204,9 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
 
 #about-close {
   position: absolute;
-  top: 0rem;
+  top: 1rem;
   right: 1rem;
-  background: rgba(255, 255, 255, 0.25); }
+  background: rgba(255, 255, 255, 0.5); }
   #about-close:hover {
     background: white;
     color: black; }

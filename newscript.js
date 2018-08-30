@@ -98,7 +98,8 @@ function pow(num){
 }
 
 function generateColors(){
-    var t = document.body.getElementsByClassName("tier");
+    var t = document.body.getElementsByClassName("tier-box");
+    var h = document.body.getElementsByClassName("tier-header");
     for(var i = 0; i < t.length; i++){
         var r = t.length / 3;
         var g = t.length / 3 + 3;
@@ -115,13 +116,14 @@ function generateColors(){
             b = 175;
         }
         t[i].style.backgroundColor = "rgba("+r+", "+g+", "+b+", 0.9)";
+        h[i].style.backgroundColor = "rgba("+r+", "+g+", "+b+", 0.9)";
     }
 }
 
 function initTiers(){
     var ts = document.getElementById("tiers");
     for(var i = 0; i < tiers.length; i++){
-        ts.innerHTML = ts.innerHTML + '<ul id="'+tiers[i]+'" class="tier"><li class="tier-header"><h3 contenteditable="true">'+tiers[i]+'</h3></li></ul>';
+        ts.innerHTML = ts.innerHTML + '<div class="tier-box"><div class="tier-header"><h3 contenteditable="true">'+tiers[i]+'</h3></div><ul id="'+tiers[i]+'" class="tier"></ul></div>';
     }
 }
 
@@ -137,7 +139,7 @@ function addTier(){
     else{
         l = String.fromCharCode(tiers[tiers.length-1].charCodeAt() + 1);
     }
-    ts.innerHTML = ts.innerHTML + '<ul id="'+l+'" class="tier"><li class="tier-header"><h3 contenteditable="true">'+l+'</h3></li></ul>';
+    ts.innerHTML = ts.innerHTML + '<div class="tier-box"><div class="tier-header"><h3 contenteditable="true">'+l+'</h3></div><ul id="'+l+'" class="tier"></ul></div>';
     tiers.push(l);
 }
 
@@ -150,7 +152,7 @@ function removeTier(){
         c[i].style.width = "unset";
         $("#character-area").append(c[i]);
     }
-    $(".tier:last-child").remove();
+    $(".tier-box:last-child").remove();
     tiers.pop();
 }
 
@@ -175,7 +177,7 @@ $(document).ready(function(){
         items: ".character",
         placeholder: "placeholder",
     });
-    $("#about-button").click(function(){
+    $("#about").click(function(){
         $("#about-section").slideToggle(200);
     });
     $("#options").click(function(){
@@ -210,7 +212,7 @@ $(document).ready(function(){
         }
     });
     $(document).click(function(event){
-        if ($(event.target).is('#about-section, #about-section *') || $("#about-section").css("display") == "none" || $(event.target).is("#about-button")) {
+        if ($(event.target).is('#about-section, #about-section *') || $("#about-section").css("display") == "none" || $(event.target).is("#about")) {
             return;
         }
         else
@@ -237,6 +239,11 @@ $(document).ready(function(){
     $("#reset").click(function(){
         $(".tier .character").remove();
         populateCharacters();
+        $('.character').draggable({
+            connectToSortable: 'ul',
+            revert: 'invalid',
+            scroll: false
+        });
     });
 });
 $(window).on("load", function(){
