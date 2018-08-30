@@ -99,7 +99,7 @@ function pow(num){
 
 function generateColors(){
     var t = document.body.getElementsByClassName("tier-box");
-    var h = document.body.getElementsByClassName("tier-header");
+    var h = document.body.getElementsByClassName("tier-head");
     for(var i = 0; i < t.length; i++){
         var r = t.length / 3;
         var g = t.length / 3 + 3;
@@ -123,7 +123,7 @@ function generateColors(){
 function initTiers(){
     var ts = document.getElementById("tiers");
     for(var i = 0; i < tiers.length; i++){
-        ts.innerHTML = ts.innerHTML + '<div class="tier-box"><div class="tier-header"><h3 contenteditable="true">'+tiers[i]+'</h3></div><ul id="'+tiers[i]+'" class="tier"></ul></div>';
+        ts.innerHTML = ts.innerHTML + '<div class="tier-box"><div class="tier-head"><h3 contenteditable="true">'+tiers[i]+'</h3></div><ul id="'+tiers[i]+'" class="tier"></ul></div>';
     }
 }
 
@@ -139,7 +139,7 @@ function addTier(){
     else{
         l = String.fromCharCode(tiers[tiers.length-1].charCodeAt() + 1);
     }
-    ts.innerHTML = ts.innerHTML + '<div class="tier-box"><div class="tier-header"><h3 contenteditable="true">'+l+'</h3></div><ul id="'+l+'" class="tier"></ul></div>';
+    ts.innerHTML = ts.innerHTML + '<div class="tier-box"><div class="tier-head"><h3 contenteditable="true">'+l+'</h3></div><ul id="'+l+'" class="tier"></ul></div>';
     tiers.push(l);
 }
 

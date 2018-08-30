@@ -59,9 +59,9 @@
         margin-bottom: 0rem;
     }
 }
-.tier-header{
+.tier-head{
     width: 10%;
-    display: inline-block;
+    float: left;
     min-height: $tier-height;
     h3{
         text-align: center;

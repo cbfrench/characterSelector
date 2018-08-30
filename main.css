@@ -180,13 +180,13 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
   .tier:last-child {
     margin-bottom: 0rem; }
 
-.tier-header {
+.tier-head {
   width: 10%;
-  display: inline-block;
+  float: left;
   min-height: 4.25rem;
   box-sizing: border-box;
   border: 5px solid rgba(0, 0, 0, 0.25); }
-  .tier-header h3 {
+  .tier-head h3 {
     text-align: center;
     font-size: 1.5rem;
     color: white;
