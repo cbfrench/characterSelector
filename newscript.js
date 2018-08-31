@@ -236,6 +236,7 @@ $(document).ready(function(){
     populateCharacters();
     initTiers();
     generateColors();
+    getCharacterCookie();
     $('.character').draggable({
         connectToSortable: 'ul',
         revert: 'invalid',
@@ -334,7 +335,6 @@ $(document).ready(function(){
 });
 $(window).on("load", function(){
     $("#character-area").slideToggle(500);
-    getCharacterCookie();
     $('.character').draggable({
             connectToSortable: 'ul',
             revert: 'invalid',
