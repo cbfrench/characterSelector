@@ -185,7 +185,8 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
     margin-bottom: 0rem;
   position: relative;
   vertical-align: top;
-  display: inline-block; }
+  display: inline-block;
+  padding-left: 0; }
   .tier .character {
     background: rgba(255, 255, 255, 0.5);
     height: 4.25rem !important;
@@ -214,8 +215,10 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
     font-size: 1.5rem;
     color: white;
     text-shadow: 0px 0px 1px black, 0px 0px 2px black, 0px 0px 3px black;
-    vertical-align: middle;
-    outline: none; }
+    vertical-align: top;
+    outline: none;
+    margin-top: 0;
+    margin-bottom: 0; }
 
 #about-button {
   position: absolute;

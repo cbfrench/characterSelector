@@ -69,6 +69,8 @@ var characters = [
     "Zelda",
     "Zero Suit Samus"];
 
+var cookieChars = [];
+
 var tiers = [
     "S",
     "A",
@@ -163,6 +165,72 @@ function downloadCanvas(){
 	d.setAttribute("href", image);
 }
 
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*1000*60*60*24));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function getCharacterCookie(){
+    var s = getCookie("tiers");
+    var t = document.body.getElementsByClassName("tier");
+    var sp = s.split(",");
+    for(var i = 0; i < sp.length; i++){
+        var c = sp[i].split(":")[1];
+        var chars = c.split("|");
+        if(c == ""){
+            continue;
+        }
+        for(var j = 0; j < chars.length; j++){
+            cookieChars.push(chars[j]);
+            t[i].innerHTML += '<li class="character ui-draggable ui-draggable-handle ui-sortable-handle"><img src="icons/' + chars[j] + '-small.png"><p>' + chars[j] + '</p></li>';
+        }
+    }
+    $("#character-area .character p").each(function(){
+        if(cookieChars.indexOf($(this).text()) != -1){
+            $(this).parent().remove();
+        }
+    });
+}
+
+function setCharacterCookie(){
+    var t = $(".tier");
+    var h = document.body.getElementsByClassName("tier-head");
+    var s = "";
+    for(var i = 0; i < t.length; i++){
+        s += h[i].childNodes[0].innerHTML + ":";
+        var tag = "#" + tiers[i] + " .character";
+        var c = $(tag);
+        for(var j = 0; j < c.length; j++){
+            s += c[j].childNodes[1].innerHTML;
+            if(j < c.length - 1){
+                s += "|";
+            }
+        }
+        if(i < t.length - 1){
+            s += ",";
+        }
+    }
+    setCookie("tiers", s, 7);
+}
+
 
 $(document).ready(function(){
     populateCharacters();
@@ -171,7 +239,8 @@ $(document).ready(function(){
     $('.character').draggable({
         connectToSortable: 'ul',
         revert: 'invalid',
-        scroll: false
+        scroll: false,
+        stack: ".character"
     });
     $('#character-area, .tier').sortable({
         items: ".character",
@@ -258,10 +327,21 @@ $(document).ready(function(){
         $('.character').draggable({
             connectToSortable: 'ul',
             revert: 'invalid',
-            scroll: false
+            scroll: false,
+            stack: ".character"
         });
     });
 });
 $(window).on("load", function(){
     $("#character-area").slideToggle(500);
+    getCharacterCookie();
+    $('.character').draggable({
+            connectToSortable: 'ul',
+            revert: 'invalid',
+            scroll: false,
+            stack: ".character"
+    });
+});
+$(window).on("beforeunload", function(){
+    setCharacterCookie();
 });
