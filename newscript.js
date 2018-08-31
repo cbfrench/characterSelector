@@ -198,6 +198,9 @@ function getCharacterCookie(){
         if(c == ""){
             continue;
         }
+        if(i >= t.length){
+            addTier();
+        }
         for(var j = 0; j < chars.length; j++){
             cookieChars.push(chars[j]);
             t[i].innerHTML += '<li class="character ui-draggable ui-draggable-handle ui-sortable-handle"><img src="icons/' + chars[j] + '-small.png"><p>' + chars[j] + '</p></li>';
