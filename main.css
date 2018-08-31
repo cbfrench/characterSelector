@@ -120,6 +120,9 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
       #canvas-area #download-button:hover button {
         color: white; }
 
+@font-face {
+  font-family: snake;
+  src: url(fonts/SerpentineDBol.ttf); }
 #header {
   text-align: center;
   margin-top: 2rem;
@@ -132,15 +135,11 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
       #header img {
         width: 20rem; } }
   #header p {
-    font-family: "SerpentineDBol", serif;
+    font-family: snake, serif;
     font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 1.5rem;
     color: black; }
-@font-face {
-  #header p {
-    font-family: 'SerpentineDBol';
-    src: url("/fonts/SerpentineDBol.ttf"); } }
   #header.dark p {
     color: white; }
   #header.dark img {
