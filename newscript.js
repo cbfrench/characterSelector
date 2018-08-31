@@ -200,6 +200,7 @@ function getCharacterCookie(){
         }
         if(i >= t.length){
             addTier();
+            generateColors();
         }
         for(var j = 0; j < chars.length; j++){
             cookieChars.push(chars[j]);
