@@ -20,6 +20,13 @@
         color: black;
         background: $darker;
     }
+    &.dark{
+        background: white;
+        color: black;
+        &:hover{
+            background: $lighter;
+        }
+    }
 }
 .option-buttons{
     display: none;

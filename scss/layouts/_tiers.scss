@@ -5,6 +5,9 @@
     height: 100%;
     text-align: center;
     background: linear-gradient(#000000, #660000);
+    &.dark{
+        background: linear-gradient(#aaaa00, #00aaaa);
+    }
     padding : {
         top: 1rem;
         bottom: 1rem;
@@ -16,6 +19,9 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
     margin-top: -1rem;
+    &.dark{
+        background: black;
+    }
 }
 .tier-box{
     margin: auto;

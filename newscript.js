@@ -205,6 +205,16 @@ $(document).ready(function(){
         removeTier();
         generateColors();
     });
+    $("#theme").click(function(){
+        if($(this).text() === "Dark Theme"){
+            $(this).text("Light Theme");
+            $("*").addClass("dark");
+        }
+        else{
+            $(this).text("Dark Theme");
+            $("*").removeClass("dark");
+        }
+    });
     $(".tier-head h3").on("keydown", function(event, ui){
         var key = event.keyCode || event.charCode;
         if(key == 13){

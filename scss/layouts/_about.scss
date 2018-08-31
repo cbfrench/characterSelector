@@ -15,6 +15,13 @@
         background: white;
         color: black;
     }
+    &.dark{
+        background: $darker;
+        &:hover{
+            background: black;
+            color: white;
+        }
+    }
 }
 #about-section{
     display: none;
@@ -46,6 +53,18 @@
             font-weight: bold;
             text-decoration: underline;
             margin-right: 1rem;
+        }
+        margin: auto;
+        margin-bottom: 0.5rem;
+        text-align: justify;
+        max-width: 50%;
+    }
+    &.dark{
+        background: white;
+        color: black;
+        h3{
+            background: black;
+            color: white;
         }
     }
 }

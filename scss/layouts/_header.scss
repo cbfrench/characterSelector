@@ -2,6 +2,10 @@
     text-align: center;
     img{
         width: 30rem;
+        &.dark{
+            filter: invert(1);
+        }
+        @include t(all);
     }
     margin : {
         top: 2rem;
@@ -23,5 +27,8 @@
         text-transform: uppercase;
         letter-spacing: 1.5rem;
         color: black;
+        &.dark{
+            color: white;
+        }
     }
 }
