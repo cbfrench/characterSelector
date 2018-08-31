@@ -3,12 +3,6 @@
         color: white;
         @include t(all);
         text-decoration: none;
-        &.dark{
-            color: black;
-            &:hover{
-                color: #dd0000;
-            }
-        }
         &:hover{
             color: #660000;
         }
@@ -20,5 +14,11 @@
     margin-top: 5rem;
     &.dark{
         background: white;
+        a{
+            color: black;
+            &:hover{
+                color: #dd0000;
+            }
+        }
     }
 }

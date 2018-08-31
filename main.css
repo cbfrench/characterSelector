@@ -3,7 +3,7 @@ body {
   font-family: Roboto, sans-serif;
   transition: all 0.2s; }
   body.dark {
-    background: black; }
+    background: linear-gradient(#000000, #660000); }
 
 p, h1, h2, h3, h4, h5, h6, li, ul {
   -webkit-margin-before: 0em;
@@ -13,7 +13,7 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
   -webkit-padding-start: 0px; }
 
 .dark {
-  transition: all 0.2s; }
+  transition: background 0.2s; }
 
 .character {
   cursor: pointer;
@@ -125,10 +125,7 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
   margin-top: 2rem;
   margin-bottom: 2rem; }
   #header img {
-    width: 30rem;
-    transition: all 0.2s; }
-    #header img.dark {
-      filter: invert(1); }
+    width: 30rem; }
   @media only screen and (max-width: 480px) {
     #header {
       margin-bottom: 5rem; }
@@ -144,8 +141,10 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
   #header p {
     font-family: 'SerpentineDBol';
     src: url("/fonts/SerpentineDBol.ttf"); } }
-    #header p.dark {
-      color: white; }
+  #header.dark p {
+    color: white; }
+  #header.dark img {
+    filter: invert(1); }
 
 #character-area {
   list-style: none;
@@ -289,13 +288,13 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
     color: white;
     transition: all 0.2s;
     text-decoration: none; }
-    #footer a.dark {
-      color: black; }
-      #footer a.dark:hover {
-        color: #dd0000; }
     #footer a:hover {
       color: #660000; }
   #footer.dark {
     background: white; }
+    #footer.dark a {
+      color: black; }
+      #footer.dark a:hover {
+        color: #dd0000; }
 
 /*# sourceMappingURL=main.css.map */

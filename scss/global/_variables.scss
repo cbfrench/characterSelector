@@ -27,7 +27,7 @@ body{
     font-family: $font;
     @include t(all);
     &.dark{
-        background: black;
+        background: linear-gradient(#000000, #660000);
     }
 }
 p, h1, h2, h3, h4, h5, h6, li, ul{
@@ -38,5 +38,5 @@ p, h1, h2, h3, h4, h5, h6, li, ul{
     -webkit-padding-start: 0px;
 }
 .dark{
-    @include t(all);
+    @include t(background);
 }

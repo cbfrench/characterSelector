@@ -208,11 +208,11 @@ $(document).ready(function(){
     $("#theme").click(function(){
         if($(this).text() === "Dark Theme"){
             $(this).text("Light Theme");
-            $("*").addClass("dark");
+            $("body, #header, .button, #character-area, #footer").addClass("dark");
         }
         else{
             $(this).text("Dark Theme");
-            $("*").removeClass("dark");
+            $("body, #header, .button, #character-area, #footer").removeClass("dark");
         }
     });
     $(".tier-head h3").on("keydown", function(event, ui){
@@ -236,6 +236,9 @@ $(document).ready(function(){
     $("#save-list").click(function(){
         var d = document.getElementById("canvas-area");
         $("#canvas-area").slideToggle(200);
+        if($("body").hasClass("dark")){
+            $("#tiers").css("background", "linear-gradient(#000000, #660000)");
+        }
         html2canvas(document.querySelector("#tiers")).then(canvas => {
             d.appendChild(canvas)
         });
@@ -244,6 +247,9 @@ $(document).ready(function(){
         if (event.target !== this)
             return;
         $("canvas").remove();
+        if($("body").hasClass("dark")){
+            $("#tiers").css("background", "transparent");
+        }
         $("#canvas-area").slideToggle(200);
     });
     $("#reset").click(function(){
