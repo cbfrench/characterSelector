@@ -190,6 +190,9 @@ function getCookie(cname) {
 
 function getCharacterCookie(){
     var s = getCookie("tiers");
+    if(s == ""){
+        return;
+    }
     var t = document.body.getElementsByClassName("tier");
     var sp = s.split(",");
     for(var i = 0; i < sp.length; i++){
@@ -235,12 +238,66 @@ function setCharacterCookie(){
     setCookie("tiers", s, 7);
 }
 
+function setHeaderCookie(){
+    var s = "";
+    var h = document.body.getElementsByClassName("tier-head");
+    for(var i = 0; i < h.length; i++){
+        s += h[i].childNodes[0].innerHTML;
+        if(i < h.length - 1){
+            s += "|";
+        }
+    }
+    setCookie("headers", s, 7);
+}
+function getHeaderCookie(){
+    var s = getCookie("headers");
+    if(s == ""){
+        return;
+    }
+    s = s.split("|");
+    var t = document.body.getElementsByClassName("tier-head");
+    for(var i = 0; i < t.length; i++){
+        t[i].childNodes[0].innerHTML = s[i];
+    }
+}
 
-$(document).ready(function(){
+function setThemeCookie(){
+    var t = document.getElementById("theme");
+    if(t.innerHTML == "Dark Theme"){
+        setCookie("theme", "light", 7);
+    }
+    else{
+        setCookie("theme", "dark", 7);
+    }
+}
+
+function getThemeCookie(){
+    var t = getCookie("theme");
+    var b = document.getElementById("theme");
+    if(t == "dark"){
+        $("body, #header, .button, #character-area, #footer").addClass("dark");
+        b.innerHTML = "Light Theme";
+    }
+    else{
+
+    }
+}
+
+function loadPage(){
     populateCharacters();
     initTiers();
     generateColors();
+}
+
+function getCookies(){
     getCharacterCookie();
+    getHeaderCookie();
+    getThemeCookie();
+}
+
+
+$(document).ready(function(){
+    $.when(loadPage()).then(getCookies());
     $('.character').draggable({
         connectToSortable: 'ul',
         revert: 'invalid',
@@ -335,6 +392,10 @@ $(document).ready(function(){
             scroll: false,
             stack: ".character"
         });
+        var t = document.body.getElementsByClassName("tier-head");
+        for(var i = 0; i < tiers.length; i++){
+            t[i].childNodes[0].innerHTML = tiers[i];
+        }
     });
 });
 $(window).on("load", function(){
@@ -348,4 +409,6 @@ $(window).on("load", function(){
 });
 $(window).on("beforeunload", function(){
     setCharacterCookie();
+    setHeaderCookie();
+    setThemeCookie();
 });
