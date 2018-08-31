@@ -200,6 +200,7 @@ function getCharacterCookie(){
         }
         for(var j = 0; j < chars.length; j++){
             cookieChars.push(chars[j]);
+            alert(t[i].innerHTML);
             t[i].innerHTML += '<li class="character ui-draggable ui-draggable-handle ui-sortable-handle"><img src="icons/' + chars[j] + '-small.png"><p>' + chars[j] + '</p></li>';
         }
     }
