@@ -51,6 +51,7 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
   user-select: none;
   cursor: pointer;
   margin: auto;
+    margin-bottom: 1rem;
   text-align: center;
   line-height: 2.5rem;
   transition: all 0.2s; }
@@ -143,7 +144,8 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
 
 #tiers {
   padding-top: 1rem;
-  padding-bottom: 1rem; }
+  padding-bottom: 1rem;
+  margin-top: -1rem; }
 
 .tier-box {
   margin: auto;
@@ -153,6 +155,8 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
   vertical-align: top;
   margin-right: 4rem;
   overflow: hidden; }
+  .tier-box:nth-child(1) {
+    margin-top: 0rem; }
 
 .tier {
   list-style: none;
