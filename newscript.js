@@ -175,7 +175,7 @@ $(document).ready(function(){
     });
     $('#character-area, .tier').sortable({
         items: ".character",
-        placeholder: "placeholder",
+        placeholder: "placeholder"
     });
     $("#about").click(function(){
         $("#about-section").slideToggle(200);
@@ -205,7 +205,7 @@ $(document).ready(function(){
         removeTier();
         generateColors();
     });
-    $(".tier li h3").on("keydown", function(event, ui){
+    $(".tier-head h3").on("keydown", function(event, ui){
         var key = event.keyCode || event.charCode;
         if(key == 13){
             $(this).blur();

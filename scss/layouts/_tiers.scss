@@ -30,7 +30,7 @@
     min-height: $tier-height;
     width: 90%;
     margin: auto{
-        bottom: 1rem;
+        bottom: 0rem;
     }
     position: relative;
     vertical-align: top;
@@ -55,9 +55,6 @@
             top: 5px solid $darker;
             bottom: 5px solid $darker;
         }
-    }
-    &:last-child{
-        margin-bottom: 0rem;
     }
 }
 .tier-head{

@@ -159,7 +159,7 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
   min-height: 4.25rem;
   width: 90%;
   margin: auto;
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
   position: relative;
   vertical-align: top;
   display: inline-block; }
@@ -179,8 +179,6 @@ p, h1, h2, h3, h4, h5, h6, li, ul {
       margin-left: -3px; }
     .tier .character:hover {
       background: white; }
-  .tier:last-child {
-    margin-bottom: 0rem; }
 
 .tier-head {
   width: 10%;
