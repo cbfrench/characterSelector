@@ -20,6 +20,7 @@ var characters = [
     "Ice Climbers",
     "Ike",
     "Inkling",
+    "Isabelle",
     "Jigglypuff",
     "King Dedede",
     "King K. Rool",
